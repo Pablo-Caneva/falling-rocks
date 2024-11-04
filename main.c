@@ -166,7 +166,7 @@ int checkCollision(Ball balls[], int *ballCount) {
     for (int i = 0; i < *ballCount; i++) {
         // Check if the ball is within the player's position
         if (balls[i].y == HEIGHT - 1 && balls[i].x == playerX) {
-            if (balls[i].value <= playerValue) {
+            if (balls[i].value < playerValue) {
                 // Consume the ball and increase player's value
                 playerValue ++;
                 if (playerValue > MAX_BALL_VALUE) {
